@@ -1,0 +1,19 @@
+# ruby
+/.bundle/
+/.yardoc
+/_yardoc/
+/coverage/
+/doc/
+/pkg/
+/spec/reports/
+/tmp/
+
+# rspec failure tracking
+.rspec_status
+
+# elixir
+_build
+deps
+
+# node
+node_modules
