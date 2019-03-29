@@ -1,4 +1,4 @@
-require "min_sort_swaps/min_sort_swaps"
+Dir[File.join(File.dirname(__FILE__), "*.rb")].each {|file| require file }
 
 module Alg
   def self.method_missing(a, *params)
