@@ -18,9 +18,19 @@ describe('reverseList', function () {
   it('reverseList', function () {
     var test1 = {val: 1, next: {val: 2, next: {val: 3}}};
     var result1 = {val: 3, next: {val: 2, next: {val: 1, next: null}}};
-    console.log(reverseList(test1));
-    console.log(result1);
     chai.expect(reverseList(test1)).to.deep.equal(result1);
     chai.expect(reverseList(null)).to.deep.equal(null);
+  });
+});
+
+describe('mergeTwoLists', function () {
+  it('mergeTwoLists', function () {
+    var l1 = {val: 1, next: {val: 2, next: {val: 3}}};
+    var l2 = {val: 2, next: {val: 4, next: {val: 5}}};
+    //var result1 = {val: 3, next: {val: 2, next: {val: 1}}};
+    //console.log(mergeTwoLists(l1, l2));
+    //console.log(result1);
+    chai.expect(mergeTwoLists(l1, l2)).to.deep.equal({val: 1, next: {val: 2, next: {val: 2, next: {val: 3, next: {val: 4, next: {val: 5}}}}}});
+    //chai.expect(reverseList(null)).to.deep.equal(null);
   });
 });
