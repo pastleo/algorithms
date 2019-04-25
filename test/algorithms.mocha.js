@@ -27,10 +27,28 @@ describe('mergeTwoLists', function () {
   it('mergeTwoLists', function () {
     var l1 = {val: 1, next: {val: 2, next: {val: 3}}};
     var l2 = {val: 2, next: {val: 4, next: {val: 5}}};
-    //var result1 = {val: 3, next: {val: 2, next: {val: 1}}};
-    //console.log(mergeTwoLists(l1, l2));
-    //console.log(result1);
     chai.expect(mergeTwoLists(l1, l2)).to.deep.equal({val: 1, next: {val: 2, next: {val: 2, next: {val: 3, next: {val: 4, next: {val: 5}}}}}});
-    //chai.expect(reverseList(null)).to.deep.equal(null);
+  });
+});
+
+describe('isPalindrome', function () {
+  it('isPalindrome', function () {
+    var list1 = {val: 1, next: {val: 2, next: {val: 3}}};
+    chai.expect(isPalindrome(list1)).to.equal(false);
+    var list2 = {val: 1, next: {val: 2, next: {val: 3, next: {val: 2, next: {val: 1}}}}};
+    chai.expect(isPalindrome(list2)).to.equal(true);
+    var list3 = {val: 1, next: {val: 2, next: {val: 3, next: {val: 2, next: {val: 1, next: {val: 5}}}}}};
+    chai.expect(isPalindrome(list3)).to.equal(false);
+  });
+});
+
+describe('hasCycle', function () {
+  it('hasCycle', function () {
+    var list1a = {val: 5};
+    var list1 = {val: 1, next: {val: 2, next: {val: 3, next: list1a}}};
+    list1a.next = list1;
+    chai.expect(hasCycle(list1)).to.equal(true);
+    var list2 = {val: 1, next: {val: 2, next: {val: 3}}};
+    chai.expect(hasCycle(list2)).to.equal(false);
   });
 });
