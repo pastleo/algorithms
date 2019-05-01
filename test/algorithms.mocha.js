@@ -82,3 +82,14 @@ describe('isValidSudoku', function () {
     chai.expect(isValidSudoku(board2)).to.equal(true);
   });
 });
+
+describe('sortedArrayToBST', function () {
+  it('sortedArrayToBST', function () {
+    chai.expect(sortedArrayToBST([-10,-3,0,5])).to.deep.equal(
+      {val:-3,left:{val:-10,right:null,left:null},right:{val:0,left:null,right:{val:5,right:null,left:null}}}
+    );
+    chai.expect(sortedArrayToBST([-10,-3,0,5,9])).to.deep.equal(
+      {val:0,left:{val:-10,left:null,right:{val:-3,right:null,left:null}},right:{val:5,left:null,right:{val:9,right:null,left:null}}}
+    );
+  });
+});
