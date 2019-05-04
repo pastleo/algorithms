@@ -93,3 +93,40 @@ describe('sortedArrayToBST', function () {
     );
   });
 });
+
+describe('rob', function () {
+  it('rob', function () {
+    chai.expect(rob([1,2,3,1])).to.equal(4);
+    chai.expect(rob([])).to.equal(0);
+    chai.expect(rob([0])).to.equal(0);
+  });
+});
+
+describe('romanToInt', function () {
+  it('romanToInt', function () {
+    chai.expect(romanToInt('III')).to.equal(3);
+  });
+});
+
+describe('missingNumber', function () {
+  it('missingNumber', function () {
+    chai.expect(missingNumber([3,0,1])).to.equal(2);
+    chai.expect(missingNumber([9,6,4,2,3,5,7,0,1])).to.equal(8);
+  });
+});
+
+describe('isSymmetric', function () {
+  it('isSymmetric', function () {
+    chai.expect(isSymmetric({
+      val: 1,
+      left: {val: 2, left: {val: 3, left: null, right: null}, right: {val: 4, left: null, right: null}},
+      right: {val: 2, right: {val: 3, left: null, right: null}, left: {val: 4, left: null, right: null}},
+    })).to.equal(true);
+
+    chai.expect(isSymmetric({
+      val: 1,
+      left: {val: 2, right: {val: 3, left: null, right: null}, left: null},
+      right: {val: 2, right: {val: 3, left: null, right: null}, left: null},
+    })).to.equal(false);
+  });
+});
