@@ -15,14 +15,14 @@ npm install
 npm run test [test/algorithms.js]
 ```
 
-## elixir
+## Elixir
 
 ```
 mix deps.get # actually we don't need any deps
 mix test [test/algorithms_test.exs]
 ```
 
-## ruby
+## Ruby
 
 ### setup
 
@@ -30,4 +30,12 @@ mix test [test/algorithms_test.exs]
 gem install bundler
 bundle
 bundle exec rspec [spec/algorithms_spec.rb]
+./bin/irb
+```
+
+## Rust
+
+```
+cargo test
+cargo run
 ```
