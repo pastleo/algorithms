@@ -17,16 +17,9 @@ npm run test [test/algorithms.js]
 
 ## elixir
 
-### setup
-
 ```
 mix deps.get # actually we don't need any deps
-```
-
-### test
-
-```
-mix test [test/some_test.exs]
+mix test [test/algorithms_test.exs]
 ```
 
 ## ruby
@@ -36,10 +29,5 @@ mix test [test/some_test.exs]
 ```
 gem install bundler
 bundle
-```
-
-### test
-
-```
-rspec [spec/some_spec.rb]
+bundle exec rspec [spec/algorithms_spec.rb]
 ```

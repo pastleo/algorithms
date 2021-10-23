@@ -4,4 +4,8 @@ module Alg
   def self.method_missing(a, *params)
     self.instance_method(a).bind(self).call(*params)
   end
+
+  def self.plus(a, b)
+    a + b
+  end
 end

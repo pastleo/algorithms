@@ -1,7 +1,8 @@
 defmodule AlgorithmsTest do
   use ExUnit.Case
+  import Algorithms
 
-  test "the truth" do
-    assert 1 + 1 == 2
+  test "1 + 1 = 2" do
+    assert plus(1, 1) == 2
   end
 end
