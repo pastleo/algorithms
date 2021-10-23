@@ -2,24 +2,46 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <title>Mocha Tests</title>
+    <title>Tests using Mocha</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="https://unpkg.com/mocha/mocha.css" />
   </head>
   <body>
+    <div style="position: absolute; top: 0; left: 0; padding: 1.5rem;">
+      <input id='test-file-input'>
+      <button id='test-file-btn'>Load &amp; Run</button>
+    </div>
     <div id="mocha"></div>
 
-    <script src="https://unpkg.com/chai/chai.js"></script>
-    <script src="https://unpkg.com/mocha/mocha.js"></script>
+    <script src="https://unpkg.com/chai@4.3.4/chai.js"></script>
+    <script src="https://unpkg.com/mocha@9.1.3/mocha.js"></script>
 
     <script class="mocha-init">
       mocha.setup('bdd');
       mocha.checkLeaks();
     </script>
-    <script src="lib/algorithms.js"></script>
-    <script src="test/algorithms.mocha.js"></script>
-    <script class="mocha-exec">
-      mocha.run();
+
+    <script class="mocha-exec" type="module">
+      const path = getQueryVariable('path') || './test/algorithms.js';
+      document.getElementById('test-file-input').value = path;
+      document.getElementById('test-file-btn').addEventListener('click', () => {
+        window.location.search = '?path=' + document.getElementById('test-file-input').value;
+      });
+      
+      import(path).then(() => {
+        mocha.run();
+      });
+
+      function getQueryVariable(variable) {
+        const query = window.location.search.substring(1);
+        const vars = query.split('&');
+        for (let i = 0; i < vars.length; i++) {
+          const pair = vars[i].split('=');
+          if (decodeURIComponent(pair[0]) === variable) {
+            return decodeURIComponent(pair[1]);
+          }
+        }
+      }
     </script>
   </body>
 </html>

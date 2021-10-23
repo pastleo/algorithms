@@ -1,3 +1,11 @@
+import '../lib/helper/node-chai.cjs';
+import {
+  sum, removeNthFromEnd, reverseList,
+  mergeTwoLists, isPalindrome, hasCycle,
+  isValidSudoku, sortedArrayToBST, rob,
+  romanToInt, missingNumber, isSymmetric,
+} from '../lib/algorithms.js';
+
 describe('sum', function () {
   it('should return sum of arguments', function () {
     chai.expect(sum(1, 2)).to.equal(3);

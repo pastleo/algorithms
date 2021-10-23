@@ -2,18 +2,17 @@
 
 My algorithm practices
 
-## javascript
+## Browser
 
-### setup
+use a static http server to serve this whole project, then use a browser to navigate to `index.html`
+
+> note: need to map `.cjs` MIME type to `application/x-javascript`
+
+## NodeJS
 
 ```
 npm install
-```
-
-### test
-
-```
-npm run test [test/some.test.js]
+npm run test [test/algorithms.js]
 ```
 
 ## elixir
