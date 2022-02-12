@@ -1,0 +1,27 @@
+#!/bin/bash
+
+SCRIPT_DIR=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )
+cd "$SCRIPT_DIR/.."
+
+set -e
+
+cmake -S . -B cmake_build
+cmake --build cmake_build
+echo ""
+
+cd cmake_build
+case "$1" in
+  run)
+    ./algorithms
+    exit $?
+    ;;
+  test)
+    ctest
+    exit $?
+    ;;
+
+  *)
+    printf "usage:\n\t$0 run\n\t$0 test\n"
+    exit 127
+    ;;
+esac

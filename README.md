@@ -24,8 +24,6 @@ mix test [test/algorithms_test.exs]
 
 ## Ruby
 
-### setup
-
 ```
 gem install bundler
 bundle
@@ -38,4 +36,11 @@ bundle exec rspec [spec/algorithms_spec.rb]
 ```
 cargo test
 cargo run
+```
+
+## C++ / CMake
+
+```
+./bin/cmake_build test
+./bin/cmake_build run
 ```

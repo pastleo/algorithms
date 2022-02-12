@@ -18,7 +18,8 @@ deps
 # node
 node_modules
 
-
-# Added by cargo
-
+# rust
 /target
+
+# cmake / cpp
+/cmake_build
