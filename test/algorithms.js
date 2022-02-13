@@ -119,6 +119,8 @@ describe('romanToInt', function () {
 
 describe('missingNumber', function () {
   it('missingNumber', function () {
+    chai.expect(missingNumber([4,0,3,1])).to.equal(2);
+    chai.expect(missingNumber([8,3,5,2,4,6,0,1])).to.equal(7);
     chai.expect(missingNumber([3,0,1])).to.equal(2);
     chai.expect(missingNumber([9,6,4,2,3,5,7,0,1])).to.equal(8);
   });

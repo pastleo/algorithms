@@ -31,6 +31,10 @@ TEST(PairWithTargetSum, BasicAssertions) {
 TEST(RemoveDuplicates, BasicAssertions) {
   EXPECT_EQ(removeDuplicates(vector<int> { 2, 3, 3, 3, 6, 9, 9 }), 4);
   EXPECT_EQ(removeDuplicates(vector<int> { 2, 2, 2, 11 }), 2);
+  EXPECT_EQ(removeDuplicates(vector<int> { 2, 2 }), 1);
+  EXPECT_EQ(removeDuplicates(vector<int> { 1, 2 }), 2);
+  EXPECT_EQ(removeDuplicates(vector<int> { 1 }), 1);
+  EXPECT_EQ(removeDuplicates(vector<int> {}), 0);
 }
 
 
