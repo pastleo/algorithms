@@ -23,3 +23,6 @@ node_modules
 
 # cmake / cpp
 /cmake_build
+
+# python
+__pycache__

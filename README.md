@@ -42,9 +42,21 @@ cargo test
 cargo run
 ```
 
-## C++ / CMake
+## C++
+
+> [CMake](https://cmake.org/install/) is required
+>> install on ArchLinux: `pacman -Sy cmake`
 
 ```bash
 ./bin/cmake_build test
 ./bin/cmake_build run
 ```
+
+## Python 3
+
+```bash
+python -m unittest
+python algorithms/algorithms.py
+```
+
+> [unittest](https://docs.python.org/3/library/unittest.html) is python's built-in unit testing framework

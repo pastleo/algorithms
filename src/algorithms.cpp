@@ -154,6 +154,8 @@ int findDuplicate(const vector<int>& nums) {
 
 #ifndef TEST
 int main() {
+  printf("Running main from src/algorithms.cpp\n");
+
   /*
   printf("running findAverageOfSubarrayOfSizeK, result:\n");
   vector<int> input { 1, 3, 2, 6, -1, 4, 1, 8, 2 };
@@ -165,9 +167,8 @@ int main() {
   printf("[%d, %d]", result.first, result.second);
   */
 
-  printf("running findDuplicate, result:\n");
-  printf("case 1: %d\n", findDuplicate(vector<int> { 3, 1, 4, 2, 2 }));
-  printf("case 2: %d\n", findDuplicate(vector<int> { 1, 2, 3, 4, 4 }));
+  printf("findDuplicate(vector<int> { 3, 1, 4, 2, 2 }): %d\n", findDuplicate(vector<int> { 3, 1, 4, 2, 2 }));
+  printf("findDuplicate(vector<int> { 1, 2, 3, 4, 4 }): %d\n", findDuplicate(vector<int> { 1, 2, 3, 4, 4 }));
 
   printf("\n");
   return 0;
