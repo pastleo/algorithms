@@ -1,4 +1,4 @@
-import '../lib/helper/node-chai.cjs';
+import './helper/setup.js';
 
 import merge from '../lib/mergeSortedArray.js'
 

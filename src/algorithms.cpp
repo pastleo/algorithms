@@ -99,16 +99,16 @@ bool linkedListHasCycle(ListNode* head) {
 }
 
 class LinkedListCycleLength {
-	public:
-		static int findCycleLength(ListNode* head) {
-			ListNode* tortoise = head;
-			ListNode* hare = head;
+  public:
+    static int findCycleLength(ListNode* head) {
+      ListNode* tortoise = head;
+      ListNode* hare = head;
 
-			while (hare != nullptr && hare->next != nullptr) {
-				hare = hare->next->next;
-				tortoise = tortoise->next;
+      while (hare != nullptr && hare->next != nullptr) {
+        hare = hare->next->next;
+        tortoise = tortoise->next;
 
-				if (hare == tortoise) return cycleLength(hare);
+        if (hare == tortoise) return cycleLength(hare);
       }
       return -1;
     }

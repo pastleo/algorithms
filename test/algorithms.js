@@ -1,4 +1,5 @@
-import '../lib/helper/node-chai.cjs';
+import './helper/setup.js';
+
 import {
   sum, removeNthFromEnd, reverseList,
   mergeTwoLists, isPalindrome, hasCycle,

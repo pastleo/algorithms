@@ -19,9 +19,10 @@ add_executable(
   algorithms
   src/algorithms.cpp
 )
+
 add_executable(
   testAlgorithms
-  test/algorithms.cpp
+  src/test/algorithms.cpp
 )
 target_link_libraries(
   testAlgorithms

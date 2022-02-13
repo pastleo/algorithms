@@ -1,4 +1,5 @@
-import '../lib/helper/node-chai.cjs';
+import './helper/setup.js';
+
 import twoSum from '../lib/twoSum.js'
 
 it('twoSum #1', () => {

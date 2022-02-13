@@ -1,5 +1,5 @@
 #include <gtest/gtest.h>
-#include "../src/algorithms.cpp"
+#include "../algorithms.cpp"
 
 // https://google.github.io/googletest/reference/assertions.html
 

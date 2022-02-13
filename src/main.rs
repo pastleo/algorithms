@@ -1,5 +1,5 @@
 pub mod algorithms;
-mod tests;
+mod test;
 
 fn main() {
     println!("Hello, world!, 1 + 1 = {}", algorithms::plus(1, 1));

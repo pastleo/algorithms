@@ -5,6 +5,9 @@ cd "$SCRIPT_DIR/.."
 
 set -e
 
+# https://google.github.io/googletest/quickstart-cmake.html
+# https://cmake.org/cmake/help/v3.22/guide/tutorial/A%20Basic%20Starting%20Point.html
+# man cmake
 cmake -S . -B cmake_build
 cmake --build cmake_build
 echo ""
