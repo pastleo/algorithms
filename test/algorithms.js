@@ -5,6 +5,7 @@ import {
   mergeTwoLists, isPalindrome, hasCycle,
   isValidSudoku, sortedArrayToBST, rob,
   romanToInt, missingNumber, isSymmetric,
+  findSingleNumber,
 } from '../lib/algorithms.js';
 
 describe('sum', function () {
@@ -139,5 +140,11 @@ describe('isSymmetric', function () {
       left: {val: 2, right: {val: 3, left: null, right: null}, left: null},
       right: {val: 2, right: {val: 3, left: null, right: null}, left: null},
     })).to.equal(false);
+  });
+});
+
+describe('findSingleNumber', function () {
+  it('should return single number', function () {
+    chai.expect(findSingleNumber([1, 4, 2, 1, 3, 2, 3])).to.equal(4);
   });
 });
